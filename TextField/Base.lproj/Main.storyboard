@@ -1,24 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextField" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your pincode here " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7vb-ae-htR" userLabel="ZipField">
+                                <rect key="frame" x="15" y="94" width="384" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="postal-code"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$0.00" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NFR-9d-fJ8" userLabel="CashField">
+                                <rect key="frame" x="15" y="158" width="384" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uaj-8B-t71" userLabel="LockField">
+                                <rect key="frame" x="15" y="222" width="325" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V6F-j2-42G">
+                                <rect key="frame" x="350" y="223.5" width="51" height="31"/>
+                            </switch>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="uaj-8B-t71" firstAttribute="top" secondItem="NFR-9d-fJ8" secondAttribute="bottom" constant="30" id="4zr-RJ-gi1"/>
+                            <constraint firstItem="uaj-8B-t71" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="BGi-rK-fEd"/>
+                            <constraint firstItem="uaj-8B-t71" firstAttribute="centerY" secondItem="V6F-j2-42G" secondAttribute="centerY" id="Deq-PJ-UjT"/>
+                            <constraint firstItem="7vb-ae-htR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="IQg-PH-oNi"/>
+                            <constraint firstItem="V6F-j2-42G" firstAttribute="leading" secondItem="uaj-8B-t71" secondAttribute="trailing" constant="10" id="LIm-gA-1gU"/>
+                            <constraint firstItem="NFR-9d-fJ8" firstAttribute="leading" secondItem="7vb-ae-htR" secondAttribute="leading" id="MHc-pR-HXY"/>
+                            <constraint firstItem="NFR-9d-fJ8" firstAttribute="top" secondItem="7vb-ae-htR" secondAttribute="bottom" constant="30" id="NMI-Vo-mHF"/>
+                            <constraint firstItem="V6F-j2-42G" firstAttribute="trailing" secondItem="NFR-9d-fJ8" secondAttribute="trailing" id="b3r-d0-Wse"/>
+                            <constraint firstItem="7vb-ae-htR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="b3s-FG-F2x"/>
+                            <constraint firstItem="NFR-9d-fJ8" firstAttribute="trailing" secondItem="7vb-ae-htR" secondAttribute="trailing" id="tfX-52-hpp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7vb-ae-htR" secondAttribute="trailing" constant="15" id="yIR-0G-Mtp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cashField" destination="NFR-9d-fJ8" id="PgT-YM-gto"/>
+                        <outlet property="lockField" destination="uaj-8B-t71" id="qGh-rv-8nq"/>
+                        <outlet property="lockSwitch" destination="V6F-j2-42G" id="udS-a7-5rY"/>
+                        <outlet property="zipField" destination="7vb-ae-htR" id="nco-6w-ke3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="67"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

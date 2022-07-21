@@ -13,6 +13,9 @@
 		937101C828896407003E9C0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937101C628896407003E9C0D /* Main.storyboard */; };
 		937101CA2889640B003E9C0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 937101C92889640B003E9C0D /* Assets.xcassets */; };
 		937101CD2889640B003E9C0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 937101CB2889640B003E9C0D /* LaunchScreen.storyboard */; };
+		937101D728896856003E9C0D /* ZipFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937101D628896856003E9C0D /* ZipFieldDelegate.swift */; };
+		937101D92889686D003E9C0D /* CashFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937101D82889686D003E9C0D /* CashFieldDelegate.swift */; };
+		937101DB288968A0003E9C0D /* LockableFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937101DA288968A0003E9C0D /* LockableFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		937101C92889640B003E9C0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		937101CC2889640B003E9C0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		937101CE2889640B003E9C0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		937101D628896856003E9C0D /* ZipFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipFieldDelegate.swift; sourceTree = "<group>"; };
+		937101D82889686D003E9C0D /* CashFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashFieldDelegate.swift; sourceTree = "<group>"; };
+		937101DA288968A0003E9C0D /* LockableFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockableFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +65,23 @@
 				937101C028896407003E9C0D /* AppDelegate.swift */,
 				937101C228896407003E9C0D /* SceneDelegate.swift */,
 				937101C428896407003E9C0D /* ViewController.swift */,
+				937101D52889680C003E9C0D /* TextFieldDelegate */,
 				937101C628896407003E9C0D /* Main.storyboard */,
 				937101C92889640B003E9C0D /* Assets.xcassets */,
 				937101CB2889640B003E9C0D /* LaunchScreen.storyboard */,
 				937101CE2889640B003E9C0D /* Info.plist */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		937101D52889680C003E9C0D /* TextFieldDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				937101D628896856003E9C0D /* ZipFieldDelegate.swift */,
+				937101D82889686D003E9C0D /* CashFieldDelegate.swift */,
+				937101DA288968A0003E9C0D /* LockableFieldDelegate.swift */,
+			);
+			path = TextFieldDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +156,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				937101C528896407003E9C0D /* ViewController.swift in Sources */,
+				937101D92889686D003E9C0D /* CashFieldDelegate.swift in Sources */,
 				937101C128896407003E9C0D /* AppDelegate.swift in Sources */,
 				937101C328896407003E9C0D /* SceneDelegate.swift in Sources */,
+				937101DB288968A0003E9C0D /* LockableFieldDelegate.swift in Sources */,
+				937101D728896856003E9C0D /* ZipFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
